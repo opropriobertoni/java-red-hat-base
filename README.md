@@ -202,3 +202,92 @@ Adiciona ícones de pastas e arquivos no estilo JetBrains, deixando o ambiente m
 > 💡 Pronto! Seu VS Code estará visualmente idêntico ao IntelliJ IDEA, mas muito mais leve e rápido. Com o ambiente configurado, o próximo passo será aplicar o **User Settings (JSON)** do projeto — onde ajustaremos o desempenho, a estética e o comportamento interno do VS Code.
 
 ---
+
+## ⚙️ 4° Passo — Aplicando o User Settings (JSON)
+
+Este passo é responsável por ajustar **toda a interface, comportamento e desempenho interno do VS Code** para desenvolvimento em **Java e Spring Boot**, garantindo fluidez mesmo em máquinas modestas.
+
+---
+
+### ⚠️ Como aplicar o arquivo de configuração
+
+1. **Copie** todo o conteúdo do arquivo `user-settings.json` (disponível neste repositório);  
+2. No **VS Code**, certifique-se de que o **Profile Java Red Hat Base** está ativo:
+```
+- Clique no ícone de engrenagem (⚙️) → **Profiles** → selecione **Java Red Hat Base**;  
+```
+3. Pressione **F1** (ou `Ctrl + Shift + P`) e digite: `Open User Settings (JSON)` → Pressione **Enter**;  
+4. **Cole** o conteúdo copiado **substituindo todo o texto existente**;  
+5. Pressione **`Ctrl + S`** para **salvar**;  
+6. Se o VS Code solicitar **reinicialização**, **confirme**. Isso garante que todas as configurações sejam aplicadas corretamente.
+
+### 🧩 Estrutura e explicação do arquivo
+
+#### 1. Workbench & Explorer (Interface do VS Code)
+Configura aparência e comportamento da interface:
+- `"workbench.startupEditor": "newUntitledFile"` → abre o VS Code com um arquivo novo e vazio.  
+- `"workbench.editor.labelFormat": "short"` → exibe nomes curtos nas abas.  
+- `"workbench.editor.showTabs": "multiple"` → permite várias abas simultâneas.  
+- `"workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark"` → aplica ícones no estilo JetBrains.  
+- `"workbench.colorTheme": "JetBrains Dark Theme"` → usa tema escuro agradável aos olhos.  
+- `"explorer.compactFolders": false"` → exibe cada pasta separadamente (melhor visualização em `src/main/java`).  
+- `"explorer.confirmDragAndDrop": false"` → evita pop-ups ao mover pastas no explorador.
+
+#### 2. Editor (Legibilidade e produtividade)
+Ajustes de fonte, formatação e comportamento:
+- `"editor.fontFamily": "JetBrains Mono"` → fonte otimizada para código.  
+- `"editor.fontLigatures": true"` → exibe ligações tipográficas (como `==`, `!=`, `=>`).  
+- `"editor.fontSize": 13"` → tamanho equilibrado e legível.  
+- `"editor.lineHeight": 1.2"` → altura de linha compacta.  
+- `"editor.rulers": [100]"` → régua de 100 colunas, seguindo o **Google Java Style**.  
+- `"editor.renderLineHighlight": "gutter"` → realce discreto da linha atual.  
+- `"editor.minimap.enabled": false"` → desativa o minimapa, economizando memória.  
+- `"editor.semanticHighlighting.enabled": true"` → cores diferentes para variáveis, classes e métodos.  
+- `"editor.parameterHints.enabled": true"` → mostra assinaturas de métodos enquanto digita.  
+- `"editor.formatOnSave": true"` → formata automaticamente ao salvar.  
+- `"editor.suggestSelection": "recentlyUsedByPrefix"` → prioriza sugestões que você usa com frequência.  
+- `"editor.quickSuggestions"` → ativa sugestões no código, mas desativa em comentários e strings.
+
+#### 3. Java (Ambiente e performance)
+Configura o runtime, memória e padrão de formatação:
+- `"java.jdt.ls.java.home": "${env:JAVA_HOME}"` → usa o JDK definido no sistema.  
+- `"java.configuration.runtimes"` → define o Java 25 como padrão.  
+- `"java.jdt.ls.vmargs"` → otimiza o **Language Server** com flags para máquinas simples:
+- `-XX:+UseParallelGC` → coletor de lixo rápido.  
+- `-XX:GCTimeRatio=4` → foco em responsividade.  
+- `-Xms128m` / `-Xmx512m` → uso reduzido de memória.  
+- `-Dsun.zip.disableMemoryMapping=true` → evita travamentos em I/O.  
+- `"java.format.settings.url"` → aplica o **Google Java Style**.  
+- `"java.format.settings.profile": "GoogleStyle"` → seleciona o perfil correto.  
+- `"[java]": { "editor.defaultFormatter": "redhat.java" }` → usa o formatador da Red Hat.
+
+#### 4. Build & Import (Maven)
+- `"java.import.maven.enabled": true"` → ativa import automático de projetos Maven.  
+- `"java.import.gradle.enabled": false"` → desativa Gradle para economizar recursos.  
+- `"java.maxConcurrentBuilds": 1"` → evita sobrecarga de CPU em builds simultâneos.  
+- `"java.configuration.updateBuildConfiguration": "automatic"` → reimporta dependências automaticamente.  
+- `"java.errors.incompleteClasspath.severity": "ignore"` → reduz alertas durante o carregamento inicial.
+
+#### 5. Extensões & Telemetria
+- `"extensions.ignoreRecommendations": true"` → evita pop-ups de recomendações.  
+- `"redhat.telemetry.enabled": false` e similares → desativa coleta de dados e uso de CPU desnecessário.
+
+#### 6. Files & Search
+- `"files.exclude"` → oculta arquivos e pastas desnecessários (`target`, `.classpath`, etc.).  
+- `"search.smartCase": true"` → busca inteligente com distinção de maiúsculas apenas quando usado.
+
+#### 7. Terminal Integrado
+- `"terminal.integrated.gpuAcceleration": "auto"` → aceleração automática via GPU.  
+- `"terminal.integrated.fontFamily": "JetBrains Mono"` → mantém consistência visual.  
+- `"terminal.integrated.cursorBlinking": true"` → cursor com destaque visível.
+
+#### 8. Git (Boas práticas)
+- `"git.enableSmartCommit": false"` → evita commits automáticos.  
+- `"git.autofetch": true"` / `"git.pruneOnFetch": true"` → mantém histórico remoto atualizado.  
+- `"git.allowForcePush": false"` → previne perda de histórico.  
+- `"git.confirmSync": true"` → pede confirmação antes de sincronizar.  
+
+### ✅ Conclusão do 4º passo
+
+Após aplicar o `user-settings.json`, o VS Code estará totalmente configurado para um ambiente **Java Red Hat Base**: rápido, visualmente limpo e funcional mesmo em notebooks básicos. Essas configurações padronizam a experiência de desenvolvimento, aumentam a produtividade e reduzem travamentos, oferecendo **uma IDE Java completa dentro do VS Code** — com o equilíbrio ideal entre desempenho, estética e boas práticas.
+
