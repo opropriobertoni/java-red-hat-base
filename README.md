@@ -1,6 +1,6 @@
 # ☕ Java Red Hat Base — ambiente leve e otimizado para desenvolvimento Java no VS Code
 
-**Um ambiente de desenvolvimento Java e Spring Boot completo, estável e otimizado para máquinas modestas com Sistema Operacional Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
+**Um ambiente de desenvolvimento Java e Spring Boot (Maven) completo, estável e otimizado para máquinas modestas com Sistema Operacional Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
 
 ## 🧭 Sobre o projeto
 
@@ -21,7 +21,7 @@ Este setup foi pensado para quem quer:
 ✔️ Um **ambiente leve**, que roda bem até em notebooks básicos;  
 ✔️ Um **setup didático**, que explica cada ajuste e sua função;  
 ✔️ Uma **base confiável para estudos e projetos reais**;  
-✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da JetBrains (IntelliJ IDEA).
+✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da `JetBrains` (IntelliJ IDEA).
 
 ## 💻 Contexto do ambiente base
 
@@ -35,7 +35,7 @@ Todo o ambiente foi projetado e testado em uma máquina simples — o que refor�
 | **Armazenamento** | SSD 120 GB |
 | **Sistema Operacional** | Windows 10 Pro 64 bits |
 | **IDE** | Visual Studio Code |
-| **JDK** | Versão 25 (Oracle / Red Hat) |
+| **JDK** | Versão 25 (Oracle) |
 
 Mesmo com essa configuração modesta, o ambiente roda **com estabilidade, agilidade e total compatibilidade com o ecossistema Java moderno**.
 
@@ -71,17 +71,17 @@ echo %JAVA_HOME%
 
 ### 📥 Download do JDK
 
-Se o seu computador **ainda não possui o JDK instalado**, acesse o site oficial da Oracle e baixe a versão mais recente do Java SE Development Kit (recomenda-se a versão 25 LTS).
+Se o seu computador **ainda não possui o JDK instalado**, acesse o site oficial da `Oracle` e baixe a versão mais recente do Java SE Development Kit (recomenda-se a versão 25 LTS).
 
 👉 [Baixar o JDK — Oracle Java](https://www.oracle.com/br/java/technologies/downloads/)
 
 ### 🎓 Instalação passo a passo no Windows
 
-Após o download, siga o tutorial abaixo, que explica **como instalar o JDK e configurar as variáveis JAVA_HOME e Path** de forma simples e visual:
+Após o download, siga o tutorial abaixo, que explica **como instalar o JDK e configurar as variáveis `JAVA_HOME` e `Path`** de forma simples e visual:
 
 👉 [Tutorial completo — Como instalar o JDK no Windows (YouTube)](https://www.youtube.com/watch?v=cT_VDy5TKTA)
 
-> O vídeo mostra exatamente o processo que usamos neste projeto, incluindo a criação da variável de ambiente **JAVA_HOME** e a adição do caminho **bin** no **Path**, que são indispensáveis para que o VS Code reconheça o JDK corretamente.
+> O vídeo mostra exatamente o processo que usei neste projeto, incluindo a criação da variável de ambiente `JAVA_HOME` e a adição do caminho `bin` no `Path`, que são indispensáveis para que o VS Code reconheça o JDK corretamente.
 
 ---
 
@@ -117,8 +117,6 @@ C:\Program Files\JetBrains Mono
 
 Aguarde a instalação concluir.
 
-> 💡 Se preferir, também é possível clicar em cada arquivo individualmente e selecionar **Instalar**.
-
 ---
 
 ## 🧰 3° Passo — Preparando o Ambiente de Desenvolvimento no VS Code
@@ -134,7 +132,7 @@ Este passo transforma o VS Code em uma IDE Java completa, leve e eficiente, tota
 | Campo | O que escolher | Motivo |
 |--------|----------------|--------|
 | **Name** | `Java Red Hat Base` | Identificação do ambiente Java |
-| **Icon** | Deixe em branco | É opcional |
+| **Icon** | Escolha o ícone de sua preferência | É opcional |
 | **Copy from** | `None` | Cria um perfil limpo, sem heranças |
 | **Settings** | `None` | Vamos colar o JSON do projeto |
 | **Keyboard Shortcuts** | `None` | Evita conflitos de atalhos |
@@ -150,28 +148,29 @@ Este passo transforma o VS Code em uma IDE Java completa, leve e eficiente, tota
 
 ### 🧩 Instalando as extensões essenciais
 
-Com o perfil criado, o próximo passo é instalar as extensões que transformarão o VS Code em uma IDE completa para Java e Spring Boot.
+Com o perfil criado, o próximo passo é instalar as extensões que transformarão o VS Code em uma IDE completa para **Java** e **Spring Boot**.
 
 #### 🔹 1. Extension Pack for Java  
 👉 [Baixar no Marketplace](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
 
 Este pacote oficial da **Microsoft e Red Hat** instala todas as ferramentas essenciais:
-- **Language Support for Java™ (by Red Hat)** — suporte completo à linguagem Java.  
-- **Debugger for Java** — depurador integrado.  
-- **Test Runner for Java** — executa testes JUnit.  
-- **Maven for Java** — integração com projetos Maven.  
-- **Project Manager for Java** — gerencia dependências e estrutura do projeto.  
-- **Visual Studio IntelliCode** *(opcional)* — sugestões inteligentes (pode desinstalar se quiser mais leveza).
 
-> 💡 **Dica:** Após instalar o pack, o IntelliCode pode ser desinstalado sem afetar as demais extensões.
+- **Language Support for Java™ (by Red Hat)** — suporte completo à linguagem Java;  
+- **Debugger for Java** — depurador integrado;  
+- **Test Runner for Java** — executa testes JUnit;  
+- **Maven for Java** — integração com projetos Maven;  
+- **Project Manager for Java** — gerencia dependências e estrutura do projeto;  
+- **Visual Studio IntelliCode** — sugestões inteligentes.
 
 #### 🔹 2. Spring Boot Extension Pack  
 👉 [Baixar no Marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
 
 Voltado para quem vai trabalhar com **Spring Boot**, o framework Java mais popular para back-end.  
+
 Esse pacote instala automaticamente:
-- **Spring Boot Dashboard** — gerencia e executa aplicações Spring direto do VS Code.  
-- **Spring Boot Tools** — auxilia no desenvolvimento e debug.  
+
+- **Spring Boot Dashboard** — gerencia e executa aplicações Spring direto do VS Code;  
+- **Spring Boot Tools** — auxilia no desenvolvimento e debug;  
 - **Spring Initializr Java Support** — cria novos projetos Spring Boot facilmente.
 
 > 💡 Mesmo que você ainda não use o Spring, é interessante deixar o ambiente preparado.
@@ -183,8 +182,9 @@ O **SonarLint** analisa o código em tempo real e aponta problemas, más prátic
 É uma excelente ferramenta para quem quer escrever código limpo e profissional.
 
 Principais funções:
-- Análise estática local (sem precisar de servidor).  
-- Sugestões de melhoria e correções automáticas (Quick Fix).  
+
+- Análise estática local (sem precisar de servidor);  
+- Sugestões de melhoria e correções automáticas (Quick Fix);  
 - Pode ser conectado ao SonarQube Cloud para projetos em equipe.
 
 > 💡 **Dica:** É como ter um mentor silencioso analisando seu código e te ensinando boas práticas.
@@ -199,14 +199,6 @@ Tema escuro inspirado no IntelliJ IDEA, com contraste equilibrado e ótimo para 
 
 Adiciona ícones de pastas e arquivos no estilo JetBrains, deixando o ambiente mais agradável e organizado.
 
-> 💡 Pronto! Seu VS Code estará visualmente idêntico ao IntelliJ IDEA, mas muito mais leve e rápido.
-
-### 🪶 Resumo do passo 3
-
-✅ Criamos um **Profile limpo** no VS Code;  
-✅ Instalamos o **Extension Pack for Java**, o **Spring Boot Pack** e o **SonarLint**;  
-✅ Aplicamos, opcionalmente, o **tema JetBrains** e os **ícones personalizados**;  
-
-Com o ambiente configurado, o próximo passo será aplicar o **User Settings (JSON)** do projeto — onde ajustaremos o desempenho, a estética e o comportamento interno do VS Code.
+> 💡 Pronto! Seu VS Code estará visualmente idêntico ao IntelliJ IDEA, mas muito mais leve e rápido. Com o ambiente configurado, o próximo passo será aplicar o **User Settings (JSON)** do projeto — onde ajustaremos o desempenho, a estética e o comportamento interno do VS Code.
 
 ---
