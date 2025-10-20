@@ -11,14 +11,19 @@
     "editor.fontSize": 13,
     "editor.lineHeight": 1.2,
     "editor.rulers": [
-        100,
-        120
+        100
     ],
     "editor.renderLineHighlight": "gutter",
     "editor.minimap.enabled": false,
     "editor.semanticHighlighting.enabled": true,
     "editor.parameterHints.enabled": true,
     "editor.formatOnSave": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
     "java.jdt.ls.java.home": "${env:JAVA_HOME}",
     "java.configuration.runtimes": [
         {
@@ -30,10 +35,17 @@
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms128m -Xmx512m",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "java.import.maven.enabled": true,
+    "java.import.gradle.enabled": false,
+    "java.maxConcurrentBuilds": 1,
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.showBuildStatusOnStart.enabled": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "extensions.ignoreRecommendations": true,
+    "redhat.telemetry.enabled": false,
     "telemetry.editStats.enabled": false,
     "telemetry.feedback.enabled": false,
     "files.exclude": {
@@ -47,5 +59,12 @@
     "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.fontSize": 13,
-    "terminal.integrated.cursorBlinking": true
+    "terminal.integrated.cursorBlinking": true,
+    "git.enableSmartCommit": false,
+    "git.postCommitCommand": "none",
+    "git.autofetch": true,
+    "git.pruneOnFetch": true,
+    "git.confirmSync": true,
+    "git.allowForcePush": false,
+    "git.confirmForcePush": true
 }
