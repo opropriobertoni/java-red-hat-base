@@ -1,5 +1,4 @@
 {
-    // ⚙️ Interface do VS Code
     "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.labelFormat": "short",
     "workbench.editor.showTabs": "multiple",
@@ -7,7 +6,6 @@
     "workbench.colorTheme": "JetBrains Dark Theme",
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
-    // ✍️ Editor de código
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
@@ -21,7 +19,6 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.parameterHints.enabled": true,
     "editor.formatOnSave": true,
-    // 🧠 IntelliSense e Java
     "java.jdt.ls.java.home": "${env:JAVA_HOME}",
     "java.configuration.runtimes": [
         {
@@ -36,11 +33,9 @@
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.showBuildStatusOnStart.enabled": true,
     "java.errors.incompleteClasspath.severity": "ignore",
-    // 🧩 Extensões e privacidade
     "extensions.ignoreRecommendations": true,
     "telemetry.editStats.enabled": false,
     "telemetry.feedback.enabled": false,
-    // 📁 Organização de arquivos
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -48,9 +43,7 @@
         "**/.factorypath": true,
         "**/target": true
     },
-    // 🔍 Busca
     "search.smartCase": true,
-    // 🖥️ Terminal integrado
     "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.fontSize": 13,
