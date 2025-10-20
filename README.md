@@ -20,10 +20,11 @@ O resultado é este projeto, que agora compartilho para ajudar outros desenvolve
 O propósito do **Java Red Hat Base** é entregar um ambiente pronto para trabalhar com **Java puro** e **Spring Boot**, sem precisar de configurações complexas.
 
 Este setup foi pensado para quem quer:
-- ✔️ Um **ambiente leve**, que roda bem até em notebooks básicos;  
-- ✔️ Um **setup didático**, que explica cada ajuste e sua função;  
-- ✔️ Uma **base confiável para estudos e projetos reais**;  
-- ✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da JetBrains (IntelliJ IDEA).
+
+✔️ Um **ambiente leve**, que roda bem até em notebooks básicos;  
+✔️ Um **setup didático**, que explica cada ajuste e sua função;  
+✔️ Uma **base confiável para estudos e projetos reais**;  
+✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da JetBrains (IntelliJ IDEA).
 
 ---
 
@@ -49,11 +50,16 @@ Mesmo com essa configuração modesta, o ambiente roda **com estabilidade, agili
 
 O projeto foi dividido em **5 passos práticos e diretos**, para que você possa montar seu ambiente do zero com segurança:
 
-1. ✔️ **Configurando o ambiente Java (JAVA_HOME)**  
-2. ✔️ **Baixando e instalando a fonte JetBrains Mono**  
-3. ✔️ **Preparando o ambiente de desenvolvimento no VS Code**  
-4. ✔️ **Configurando o User Settings (arquivo JSON)**  
-5. ✔️ **Aplicando otimizações e dicas adicionais**
+✔️ **Configurando o ambiente Java (JAVA_HOME)**  
+✔️ **Baixando e instalando a fonte JetBrains Mono**  
+✔️ **Preparando o ambiente de desenvolvimento no VS Code**  
+✔️ **Configurando o User Settings (arquivo JSON)**  
+✔️ **Aplicando otimizações e dicas adicionais**
 
 ---
 
+```
+Testando como fica no GitHub.
+```
+
+Ok.
