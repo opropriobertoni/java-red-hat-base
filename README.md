@@ -2,7 +2,7 @@
 
 **Um ambiente de desenvolvimento Java e Spring Boot completo, estável e otimizado para máquinas modestas com Sistema Operacional Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
 
----
+
 
 ## 🧭 Sobre o projeto
 
@@ -14,7 +14,7 @@ Assim, comecei a construir o meu próprio ambiente: enxuto, rápido e organizado
 
 O resultado é este projeto, que agora compartilho para ajudar outros desenvolvedores e estudantes que estão na mesma caminhada.
 
----
+
 
 ## 🎯 Objetivo
 
@@ -27,7 +27,7 @@ Este setup foi pensado para quem quer:
 ✔️ Uma **base confiável para estudos e projetos reais**;  
 ✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da JetBrains (IntelliJ IDEA).
 
----
+
 
 ## 💻 Contexto do ambiente base
 
@@ -45,7 +45,7 @@ Todo o ambiente foi projetado e testado em uma máquina simples — o que refor�
 
 Mesmo com essa configuração modesta, o ambiente roda **com estabilidade, agilidade e total compatibilidade com o ecossistema Java moderno**.
 
----
+
 
 ## 📘 Estrutura do guia
 
@@ -57,7 +57,11 @@ O projeto foi dividido em **5 passos práticos e diretos**, para que você possa
 ✔️ **Configurando o User Settings (arquivo JSON)**  
 ✔️ **Aplicando otimizações e dicas adicionais**
 
+
+
 ---
+
+
 
 ## ☕ 1° Passo — Instalando o JDK no Windows
 
@@ -65,7 +69,7 @@ Antes de começar a configurar o Visual Studio Code, é fundamental garantir que
 
 O **JDK** é o conjunto de ferramentas que permite **compilar, executar e depurar programas Java**. Sem ele, o VS Code não conseguirá reconhecer nem executar seu código Java.
 
----
+
 
 ### 🧩 Verificação prévia
 
@@ -79,7 +83,7 @@ echo %JAVA_HOME%
 ``` 
 > Se ambos os comandos retornarem resultados válidos, o JDK está instalado e configurado corretamente.
 
----
+
 
 ### 📥 Download do JDK
 
@@ -87,7 +91,7 @@ Se o seu computador **ainda não possui o JDK instalado**, acesse o site oficial
 
 👉 [Baixar o JDK — Oracle Java](https://www.oracle.com/br/java/technologies/downloads/)
 
----
+
 
 ### 🎓 Instalação passo a passo no Windows
 
@@ -97,18 +101,21 @@ Após o download, siga o tutorial abaixo, que explica **como instalar o JDK e co
 
 > O vídeo mostra exatamente o processo que usamos neste projeto, incluindo a criação da variável de ambiente **JAVA_HOME** e a adição do caminho **bin** no **Path**, que são indispensáveis para que o VS Code reconheça o JDK corretamente.
 
----
+
 
 ---
+
+
 
 ## 🖋️ 2° Passo — Instalando a Fonte JetBrains Mono
 
-Um bom ambiente de desenvolvimento vai além do código: a legibilidade faz toda a diferença na produtividade e no conforto visual.  
+Um bom ambiente de desenvolvimento vai além do código: a legibilidade faz toda a diferença na produtividade e no conforto visual.
+
 Por isso, este projeto utiliza a **JetBrains Mono**, uma fonte criada especialmente para programadores.
 
 Ela facilita a leitura, diferencia melhor caracteres semelhantes (como `O` e `0`, `l` e `1`) e oferece espaçamento ideal para código.  
 
----
+
 
 ### 📥 Download da Fonte
 
@@ -118,7 +125,7 @@ Acesse o site oficial da JetBrains para baixar a fonte:
 
 Na página, clique em **Download** e aguarde o download do arquivo ZIP.
 
----
+
 
 ### 📁 Organização da Pasta
 
@@ -138,7 +145,7 @@ Aguarde a instalação concluir.
 
 > 💡 Se preferir, também é possível clicar em cada arquivo individualmente e selecionar **Instalar**.
 
----
+
 
 ### ⚙️ Configuração Recomendada
 
@@ -152,9 +159,8 @@ A própria JetBrains recomenda as seguintes configurações para uso da fonte:
 Essas configurações já estão aplicadas no arquivo **User Settings** deste projeto.  
 Ao seguir os próximos passos, o VS Code aplicará automaticamente essas preferências.
 
----
 
-> 🪶 **Resumo:** A JetBrains Mono é leve, elegante e melhora significativamente a legibilidade do código.  
-> Um pequeno ajuste que faz uma grande diferença no seu conforto visual.
 
 ---
+
+
