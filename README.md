@@ -1,6 +1,6 @@
 # ☕ Java Red Hat Base — ambiente leve e otimizado para desenvolvimento Java no VS Code
 
-**Um ambiente de desenvolvimento Java e Spring Boot completo, estável e otimizado para máquinas modestas com Sistema Operaciona Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
+**Um ambiente de desenvolvimento Java e Spring Boot completo, estável e otimizado para máquinas modestas com Sistema Operacional Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
 
 ---
 
@@ -71,12 +71,12 @@ O **JDK** é o conjunto de ferramentas que permite **compilar, executar e depura
 
 Se você **já possui o JDK instalado** e **as variáveis de ambiente `JAVA_HOME` e `Path` configuradas corretamente**, pode **pular este passo** e seguir direto para a configuração do ambiente no VS Code.
 
-> 💡 Para verificar, abra o **Terminal** (PowerShell ou Prompt de Comando) e digite:
+💡 Para verificar, abra o **Terminal** (PowerShell ou Prompt de Comando) e digite:
 
-> ```bash
-> java -version
-> echo %JAVA_HOME%
-> ```
+```
+java -version
+echo %JAVA_HOME%
+``` 
 > Se ambos os comandos retornarem resultados válidos, o JDK está instalado e configurado corretamente.
 
 ---
@@ -89,13 +89,72 @@ Se o seu computador **ainda não possui o JDK instalado**, acesse o site oficial
 
 ---
 
-### 🎓 Instalação Passo a Passo no Windows
+### 🎓 Instalação passo a passo no Windows
 
 Após o download, siga o tutorial abaixo, que explica **como instalar o JDK e configurar as variáveis JAVA_HOME e Path** de forma simples e visual:
 
-🎥 [Tutorial completo — Como instalar o JDK no Windows (YouTube)](https://www.youtube.com/watch?v=cT_VDy5TKTA)
+👉 [Tutorial completo — Como instalar o JDK no Windows (YouTube)](https://www.youtube.com/watch?v=cT_VDy5TKTA)
 
 > O vídeo mostra exatamente o processo que usamos neste projeto, incluindo a criação da variável de ambiente **JAVA_HOME** e a adição do caminho **bin** no **Path**, que são indispensáveis para que o VS Code reconheça o JDK corretamente.
 
 ---
 
+---
+
+## 🖋️ 2° Passo — Instalando a Fonte JetBrains Mono
+
+Um bom ambiente de desenvolvimento vai além do código: a legibilidade faz toda a diferença na produtividade e no conforto visual.  
+Por isso, este projeto utiliza a **JetBrains Mono**, uma fonte criada especialmente para programadores.
+
+Ela facilita a leitura, diferencia melhor caracteres semelhantes (como `O` e `0`, `l` e `1`) e oferece espaçamento ideal para código.  
+
+---
+
+### 📥 Download da Fonte
+
+Acesse o site oficial da JetBrains para baixar a fonte:
+
+👉 [Baixar JetBrains Mono — Site Oficial](https://www.jetbrains.com/lp/mono/)
+
+Na página, clique em **Download** e aguarde o download do arquivo ZIP.
+
+---
+
+### 📁 Organização da Pasta
+
+Para manter a organização, crie manualmente uma pasta específica para armazenar a fonte no seu computador.  
+
+Caminho recomendado:
+
+```
+C:\Program Files\JetBrains Mono
+```
+
+1. Extraia o conteúdo do arquivo ZIP que você baixou para dentro dessa pasta (`C:\Program Files\JetBrains Mono`);
+2. Acesse a subpasta `fonts`, depois abra `ttf`;  
+3. Selecione todos os arquivos (`Ctrl + A`), clique com o botão direito do mouse e escolha **Instalar para todos os usuários**.  
+
+Aguarde a instalação concluir.
+
+> 💡 Se preferir, também é possível clicar em cada arquivo individualmente e selecionar **Instalar**.
+
+---
+
+### ⚙️ Configuração Recomendada
+
+A própria JetBrains recomenda as seguintes configurações para uso da fonte:
+
+| Parâmetro | Valor |
+|------------|--------|
+| **Tamanho da fonte** | 13 pt |
+| **Espaçamento entre linhas** | 1.2 |
+
+Essas configurações já estão aplicadas no arquivo **User Settings** deste projeto.  
+Ao seguir os próximos passos, o VS Code aplicará automaticamente essas preferências.
+
+---
+
+> 🪶 **Resumo:** A JetBrains Mono é leve, elegante e melhora significativamente a legibilidade do código.  
+> Um pequeno ajuste que faz uma grande diferença no seu conforto visual.
+
+---
