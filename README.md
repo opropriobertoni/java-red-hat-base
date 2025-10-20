@@ -124,9 +124,9 @@ Acesse o site oficial da JetBrains para baixar a fonte:
 👉 [Baixar JetBrains Mono — Site Oficial](https://www.jetbrains.com/lp/mono/)
 
 Na página, clique em **Download** e aguarde o download do arquivo ZIP.
-  
-  
-  
+<br>
+<br>
+<br>
 ### 📁 Organização da Pasta
   
 Para manter a organização, crie manualmente uma pasta específica para armazenar a fonte no seu computador.  
@@ -144,24 +144,3 @@ C:\Program Files\JetBrains Mono
 Aguarde a instalação concluir.
 
 > 💡 Se preferir, também é possível clicar em cada arquivo individualmente e selecionar **Instalar**.
-  
-  
-  
-### ⚙️ Configuração Recomendada
-  
-A própria JetBrains recomenda as seguintes configurações para uso da fonte:
-
-| Parâmetro | Valor |
-|------------|--------|
-| **Tamanho da fonte** | 13 pt |
-| **Espaçamento entre linhas** | 1.2 |
-
-Essas configurações já estão aplicadas no arquivo **User Settings** deste projeto.  
-Ao seguir os próximos passos, o VS Code aplicará automaticamente essas preferências.
-  
-  
-  
----
-  
-  
-  
