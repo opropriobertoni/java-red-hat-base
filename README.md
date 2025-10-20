@@ -297,17 +297,15 @@ Após aplicar o `user-settings.json`, o VS Code estará totalmente configurado p
 
 Este passo traz **ajustes opcionais**, com foco em **máquinas com 4 GB de RAM** e no **fluxo de iniciantes**. Cada dica vem com **passo a passo** e **impacto prático**.
 
-### 5.1 — Tornar o formatter offline (`Google Style XML local`)
+### 5.1 — Tornar o formatter offline (Google Style XML local)
 
 **Objetivo:** impedir que o VS Code **baixe o XML do Google Java Style** a cada inicialização — isso **reduz I/O e latência**, deixando o ambiente mais previsível e rápido.
 
 #### Onde baixar o XML oficial
 
-- Repositório oficial do Google Styleguide:  
-  [https://github.com/google/styleguide](https://github.com/google/styleguide)
+- [Repositório oficial do Google Styleguide:](https://github.com/google/styleguide)
 
-- XML do perfil (link direto):  
-  [https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml](https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml)
+- [XML do perfil (link direto)](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml)
 
 #### Passo a passo
 
@@ -315,13 +313,11 @@ Este passo traz **ajustes opcionais**, com foco em **máquinas com 4 GB de RAM**
 
 ```
 C:\SystemTools\Java\
-
 ```
 2. **Baixe** o XML do link acima e **salve** como:
 
 ```
 C:\SystemTools\Java\google-style.xml
-
 ````
 3. Abra o VS Code e **ative** o profile **Java Red Hat Base**;
 4. Pressione **F1** (ou `Ctrl+Shift+P`) → `Open User Settings (JSON)` → **Enter**;
@@ -351,27 +347,27 @@ Essas dicas reduzem o consumo de memória, CPU e distrações visuais. Você pod
 
 #### 🧭 A) Desativar telemetria do VS Code
 
-* **Via interface:**
+**Via interface:**
 
-  1. Vá em `File` → `Preferences` → `Settings`
-  2. Busque por `telemetry`
-  3. Desative todas as opções ou defina `Telemetry Level` como **off**
+1. Vá em `File` → `Preferences` → `Settings`;
+2. Busque por `telemetry`;
+3. Desative todas as opções ou defina `Telemetry Level` como **off**.
 
 > **Impacto:** reduz tráfego de rede e uso de threads em segundo plano.
 
 #### 🧭 B) Desativar rolagem suave (smooth scrolling)
 
-* **Via interface:**
+**Via interface:**
 
-  1. Vá em `File` → `Preferences` → `Settings`
-  2. Busque por `smoothScrolling`
-  3. Desmarque a opção `Window: Smooth Scrolling`
+1. Vá em `File` → `Preferences` → `Settings`;
+2. Busque por `smoothScrolling`;
+3. Desmarque a opção `Window: Smooth Scrolling`.
 
-* **Via JSON:**
+**Via JSON:**
 
-  ```
-  "window.smoothScrolling": false
-  ```
+```
+"window.smoothScrolling": false
+```
 
 > **Impacto:** rolagem mais direta e responsiva, ideal em notebooks modestos.
 
@@ -379,37 +375,37 @@ Essas dicas reduzem o consumo de memória, CPU e distrações visuais. Você pod
 
 Essas configurações escondem elementos da interface que consomem espaço e processamento.
 
-* **Ocultar a barra lateral de ícones (Activity Bar):**
+**Ocultar a barra lateral de ícones (Activity Bar):**
 
-  * **Via interface:** `View` → `Appearance` → `Activity Bar` (alternar)
+**Via interface:** `View` → `Appearance` → `Activity Bar` (alternar)
 
-  * **Via JSON:**
+**Via JSON:**
 
-    ```
-    "workbench.activityBar.visible": false
-    ```
+```
+"workbench.activityBar.visible": false
+```
 
-* **Desativar Breadcrumbs (trilha de navegação no topo):**
+**Desativar Breadcrumbs (trilha de navegação no topo):**
 
-  * **Via interface:** `View` → `Appearance` → `Breadcrumbs` (alternar)
+**Via interface:** `View` → `Appearance` → `Breadcrumbs` (alternar)
 
-  * **Via JSON:**
+**Via JSON:**
 
-    ```
-    "breadcrumbs.enabled": false
-    ```
+```
+"breadcrumbs.enabled": false
+```
 
 > **Impacto:** ambiente visual mais limpo e fluido, especialmente em telas pequenas.
 
 #### 🧭 D) Controlar extensões e atualizações automáticas
 
-* **Via interface:** `Ctrl+Shift+X` → `Manage (⚙)` → `Disable/Uninstall` as extensões que você não usa.
+**Via interface:** `Ctrl+Shift+X` → `Manage (⚙)` → `Disable/Uninstall` as extensões que você não usa.
 
-* **Via JSON (para controle de updates):**
+**Via JSON (para controle de updates):**
 
-  ```
-  "extensions.autoUpdate": false
-  ```
+```
+"extensions.autoUpdate": false
+```
 
 > **Impacto:** evita processos em segundo plano e reindexações desnecessárias.
 
@@ -417,9 +413,9 @@ Essas configurações escondem elementos da interface que consomem espaço e pro
 
 Se o VS Code estiver travando ou não sugerindo código:
 
-1. Pressione **F1**
-2. Digite **Java: Clean Java Language Server Workspace**
-3. Pressione **Enter** e confirme o **Reload Window**
+1. Pressione **F1**;
+2. Digite **Java: Clean Java Language Server Workspace**;
+3. Pressione **Enter** e confirme o **Reload Window**.
 
 > **Impacto:** limpa o cache e resolve problemas de indexação sem reinstalar nada.
 
