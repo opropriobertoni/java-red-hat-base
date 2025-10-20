@@ -2,6 +2,8 @@
 
 **Um ambiente de desenvolvimento Java e Spring Boot (Maven) completo, estável e otimizado para máquinas modestas com Sistema Operacional Windows.** Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
 
+> 📜 License: MIT — veja o arquivo [LICENSE](https://github.com/opropriobertoni/java-red-hat-base/blob/main/LICENSE) para mais detalhes.
+
 ## 🧭 Sobre o projeto
 
 Este repositório nasceu de um desafio pessoal: **criar um ambiente Java profissional e fluido em um notebook simples**, sem abrir mão das boas práticas de código, da estrutura moderna de desenvolvimento e do conforto visual.

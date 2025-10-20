@@ -1,13 +1,5 @@
-# MIT License
-# 
-# Project: Java Red Hat Base
-# Author: Daniel Bertoni (opropriobertoni)
-# Created: 2025
-# Description: Development environment configuration for Java (Red Hat stack)
-# 
-# -----------------------------------------------------------------------------
-
-MIT License
+MIT License  
+SPDX-License-Identifier: MIT  
 
 Copyright (c) 2025 Daniel Bertoni
 
@@ -29,5 +21,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-# -----------------------------------------------------------------------------
-# Repository: https://github.com/opropriobertoni/java-red-hat-base
+Project: Java Red Hat Base  
+Description: Development environment configuration for Java (Red Hat stack)  
+Repository: https://github.com/opropriobertoni/java-red-hat-base
