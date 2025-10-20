@@ -1,71 +1,59 @@
-# ☕ Java Red Hat Base — VS Code Environment
+# ☕ Java Red Hat Base — ambiente leve e otimizado para desenvolvimento Java no VS Code
 
-> Ambiente Java + Spring Boot no VS Code, **otimizado para máquinas modestas**, com Stack Microsoft/Red Hat, SonarQube for IDE e tema/ícones JetBrains.
-> Portabilidade total via **JAVA_HOME** (sem caminhos fixos no JSON).
-
----
-
-## 🚀 Como usar
-
-1) **Defina o JAVA_HOME (Windows PowerShell):**
-```powershell
-setx JAVA_HOME "C:\Program Files\Java\jdk-25"
-setx PATH "%JAVA_HOME%\bin;%PATH%"
-```
-Feche e reabra o VS Code/terminal, depois confirme:
-```powershell
-java -version
-```
-
-2) **Importe o perfil**
-- VS Code → **File → Preferences → Profiles → Import Profile...**
-- Escolha: `java-red-hat-base-full.code-profile`
-- Aceite instalar as extensões recomendadas.
-
-3) **(Opcional) Abra a pasta do repo**
-Se você abrir só a pasta, as recomendações do VS Code vêm de `.vscode/extensions.json`.
+**Um ambiente de desenvolvimento Java e Spring Boot completo, estável e otimizado para máquinas modestas.**  
+Criado com base na **Stack Red Hat**, este projeto busca oferecer uma alternativa **leve, limpa e eficiente** para quem deseja programar em Java usando o **Visual Studio Code**.
 
 ---
 
-## 📦 Inclui
+## 🧭 Sobre o projeto
 
-- **Extension Pack for Java** (Microsoft/Red Hat)
-- **Spring Initializr / Boot Tools / Boot Dashboard**
-- **SonarQube for IDE** (modo leve: onSave)
-- **JetBrains Dark Theme + Icon Theme**
-- **Google Java Style** (format on save)
+Este repositório nasceu de um desafio pessoal: **criar um ambiente Java profissional e fluido em um notebook simples**, sem abrir mão das boas práticas de código, da estrutura moderna de desenvolvimento e do conforto visual.
 
----
-
-## 🧠 Por que JAVA_HOME?
-
-- Funciona em **qualquer SO** (Windows/Linux/macOS).
-- VS Code, Maven, Gradle, Spring e outras ferramentas já reconhecem.
-- Para atualizar o JDK, basta mudar o `JAVA_HOME` — **zero edição no JSON**.
+Durante minha jornada de estudos em **backend com Java**, percebi que muitas configurações disponíveis na internet partem do pressuposto de que o desenvolvedor tem uma máquina poderosa — o que não é a realidade de todos.  
+Assim, comecei a construir o meu próprio ambiente: enxuto, rápido e organizado.  
+O resultado é este projeto, que agora compartilho para ajudar outros desenvolvedores e estudantes que estão na mesma caminhada.
 
 ---
 
-## 🧩 Estrutura sugerida do repositório
+## 🎯 Objetivo
 
-```
-java-red-hat-base/
-├─ java-red-hat-base-full.code-profile   # Perfil importável (instala extensões)
-├─ java-red-hat-base.jsonc               # Settings com comentários (JSONC)
-├─ .vscode/
-│  └─ extensions.json                    # Recomendações de extensões
-└─ README.md
-```
+O propósito do **Java Red Hat Base** é entregar um ambiente pronto para trabalhar com **Java puro** e **Spring Boot**, sem precisar de configurações complexas.
 
----
-
-## 🔎 Dicas de performance (notebooks modestos)
-
-- `"editor.minimap.enabled": false`
-- `"sonarlint.analyzer.runMode": "onSave"`
-- `"terminal.integrated.gpuAcceleration": "auto"` (troque para `"off"` se notar flicker)
+Este setup foi pensado para quem quer:
+- ✔️ Um **ambiente leve**, que roda bem até em notebooks básicos;  
+- ✔️ Um **setup didático**, que explica cada ajuste e sua função;  
+- ✔️ Uma **base confiável para estudos e projetos reais**;  
+- ✔️ Um **padrão visual e de código consistente**, inspirado no ecossistema da JetBrains (IntelliJ IDEA).
 
 ---
 
-## 👤 Autor
+## 💻 Contexto do ambiente base
 
-**Daniel César Bertoni de Oliveira** — ambiente público e didático para acelerar seu setup Java no VS Code.
+Todo o ambiente foi projetado e testado em uma máquina simples — o que reforça a proposta de **eficiência e acessibilidade**:
+
+| Componente | Especificação |
+|-------------|---------------|
+| **Modelo** | Positivo Stilo XC3650 |
+| **Processador** | Intel Celeron N3010 |
+| **Memória RAM** | 4 GB |
+| **Armazenamento** | SSD 120 GB |
+| **Sistema Operacional** | Windows 10 Pro 64 bits |
+| **IDE** | Visual Studio Code |
+| **JDK** | Versão 25 (Oracle / Red Hat) |
+
+Mesmo com essa configuração modesta, o ambiente roda **com estabilidade, agilidade e total compatibilidade com o ecossistema Java moderno**.
+
+---
+
+## 📘 Estrutura do guia
+
+O projeto foi dividido em **5 passos práticos e diretos**, para que você possa montar seu ambiente do zero com segurança:
+
+1. ✔️ **Configurando o ambiente Java (JAVA_HOME)**  
+2. ✔️ **Baixando e instalando a fonte JetBrains Mono**  
+3. ✔️ **Preparando o ambiente de desenvolvimento no VS Code**  
+4. ✔️ **Configurando o User Settings (arquivo JSON)**  
+5. ✔️ **Aplicando otimizações e dicas adicionais**
+
+---
+
