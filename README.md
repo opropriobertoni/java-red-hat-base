@@ -291,3 +291,150 @@ Configura o runtime, memória e padrão de formatação:
 
 Após aplicar o `user-settings.json`, o VS Code estará totalmente configurado para um ambiente **Java Red Hat Base**: rápido, visualmente limpo e funcional mesmo em notebooks básicos. Essas configurações padronizam a experiência de desenvolvimento, aumentam a produtividade e reduzem travamentos, oferecendo **uma IDE Java completa dentro do VS Code** — com o equilíbrio ideal entre desempenho, estética e boas práticas.
 
+---
+
+## 🚀 5º Passo — Dicas extrar de otimizações para desempenho
+
+Este passo traz **ajustes opcionais**, com foco em **máquinas com 4 GB de RAM** e no **fluxo de iniciantes**. Cada dica vem com **passo a passo** e **impacto prático**.
+
+### 5.1 — Tornar o formatter offline (`Google Style XML local`)
+
+**Objetivo:** impedir que o VS Code **baixe o XML do Google Java Style** a cada inicialização — isso **reduz I/O e latência**, deixando o ambiente mais previsível e rápido.
+
+#### Onde baixar o XML oficial
+
+- Repositório oficial do Google Styleguide:  
+  [https://github.com/google/styleguide](https://github.com/google/styleguide)
+
+- XML do perfil (link direto):  
+  [https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml](https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml)
+
+#### Passo a passo
+
+1. **Crie** a pasta local para guardar o XML:
+
+```
+C:\SystemTools\Java\
+
+```
+2. **Baixe** o XML do link acima e **salve** como:
+
+```
+C:\SystemTools\Java\google-style.xml
+
+````
+3. Abra o VS Code e **ative** o profile **Java Red Hat Base**;
+4. Pressione **F1** (ou `Ctrl+Shift+P`) → `Open User Settings (JSON)` → **Enter**;
+5. Localize o trecho do formatter no `JSON` e **substitua** o bloco existente pelo abaixo:
+
+**ANTES (arquivo remoto):**
+
+```
+"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+"java.format.settings.profile": "GoogleStyle"
+```
+
+**DEPOIS (arquivo local — recomendado):**
+
+```
+"java.format.settings.url": "file:///C:/SystemTools/Java/google-style.xml",
+"java.format.settings.profile": "GoogleStyle"
+```
+
+6. **Salve** e **reinicie** o VS Code se solicitado.
+
+> **Impacto:** o formatador será carregado diretamente do disco, evitando depender da internet e tornando o carregamento do ambiente mais rápido e estável.
+
+### 5.4 — Dicas adicionais de otimização (interface e desempenho visual)
+
+Essas dicas reduzem o consumo de memória, CPU e distrações visuais. Você pode aplicá-las pela **interface gráfica (Settings UI)** ou diretamente no `User Settings (JSON)`. Todas podem ser revertidas facilmente se desejar restaurar o visual padrão.
+
+#### 🧭 A) Desativar telemetria do VS Code
+
+* **Via interface:**
+
+  1. Vá em `File` → `Preferences` → `Settings`
+  2. Busque por `telemetry`
+  3. Desative todas as opções ou defina `Telemetry Level` como **off**
+
+> **Impacto:** reduz tráfego de rede e uso de threads em segundo plano.
+
+#### 🧭 B) Desativar rolagem suave (smooth scrolling)
+
+* **Via interface:**
+
+  1. Vá em `File` → `Preferences` → `Settings`
+  2. Busque por `smoothScrolling`
+  3. Desmarque a opção `Window: Smooth Scrolling`
+
+* **Via JSON:**
+
+  ```
+  "window.smoothScrolling": false
+  ```
+
+> **Impacto:** rolagem mais direta e responsiva, ideal em notebooks modestos.
+
+#### 🧭 C) Reduzir elementos visuais (para foco e leveza)
+
+Essas configurações escondem elementos da interface que consomem espaço e processamento.
+
+* **Ocultar a barra lateral de ícones (Activity Bar):**
+
+  * **Via interface:** `View` → `Appearance` → `Activity Bar` (alternar)
+
+  * **Via JSON:**
+
+    ```
+    "workbench.activityBar.visible": false
+    ```
+
+* **Desativar Breadcrumbs (trilha de navegação no topo):**
+
+  * **Via interface:** `View` → `Appearance` → `Breadcrumbs` (alternar)
+
+  * **Via JSON:**
+
+    ```
+    "breadcrumbs.enabled": false
+    ```
+
+> **Impacto:** ambiente visual mais limpo e fluido, especialmente em telas pequenas.
+
+#### 🧭 D) Controlar extensões e atualizações automáticas
+
+* **Via interface:** `Ctrl+Shift+X` → `Manage (⚙)` → `Disable/Uninstall` as extensões que você não usa.
+
+* **Via JSON (para controle de updates):**
+
+  ```
+  "extensions.autoUpdate": false
+  ```
+
+> **Impacto:** evita processos em segundo plano e reindexações desnecessárias.
+
+#### 🧭 E) Solucionar lentidão do Java Language Server
+
+Se o VS Code estiver travando ou não sugerindo código:
+
+1. Pressione **F1**
+2. Digite **Java: Clean Java Language Server Workspace**
+3. Pressione **Enter** e confirme o **Reload Window**
+
+> **Impacto:** limpa o cache e resolve problemas de indexação sem reinstalar nada.
+
+---
+
+## ✅ Encerramento
+
+Parabéns! 🎉
+
+Você concluiu toda a configuração do ambiente **Java Red Hat Base** — um setup leve, visualmente limpo e funcional, ideal para máquinas simples e para quem está começando no desenvolvimento Java.
+
+Se este projeto te ajudou, considere **deixar uma estrela (⭐)** no repositório.
+
+Fique à vontade para **abrir issues**, **enviar PRs** ou **deixar sugestões de melhoria**.
+
+💬 Dúvidas, ideias ou otimizações?
+
+Compartilhe nos comentários do repositório — será um prazer trocar experiências e aprimorar juntos o ambiente!
